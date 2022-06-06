@@ -33,6 +33,20 @@ input {
   font-size: 1.1em;
 }
 
+#random-tree {
+  background: transparent;
+  border:1px solid #0000ee;
+  border-radius: 16px;
+  outline: 0;
+  color: #0000ee;
+  cursor: pointer; 
+}
+
+#random-tree:hover {
+  background: #0000ee;
+  color: white;
+}
+
 .night {
   background-color: #000;
 }
