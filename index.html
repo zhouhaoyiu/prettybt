@@ -54,8 +54,13 @@
       const backgroundParam = url.searchParams.get("background");
       const strokeStyleParam = url.searchParams.get("strokeStyle");
 
-      backgroundElem.value = backgroundParam ? `#${backgroundParam}` : "#ffffff";
-      strokeStyleElem.value = strokeStyleParam ? `#${strokeStyleParam}` : "#666666";
+      backgroundElem.value = validCompleteHexadecimalColor(`#${backgroundParam}`)
+      ? `#${backgroundParam}`
+      : "#ffffff";
+
+      strokeStyleElem.value = validCompleteHexadecimalColor(`#${strokeStyleParam}`)
+      ? `#${strokeStyleParam}`
+      : "#666666";
 
       let mode = {
         background: backgroundElem.value,
